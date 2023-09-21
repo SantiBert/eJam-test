@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-manrope: Manrope;
+
+  /* font sizes */
+  --font-size-xl: 1.25rem;
+  --font-size-base: 1rem;
+  --font-size-xs: 0.75rem;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-royalblue: #2c7ef8;
+  --color-darkslategray-100: #252f3d;
+  --color-dimgray: #4d5254;
+  --color-lightgray: #cfcfcf;
+
+  /* Gaps */
+  --gap-xl: 1.25rem;
+  --gap-base: 1rem;
+  --gap-3xs: 0.63rem;
+  --gap-13xl: 2rem;
+  --gap-xs: 0.75rem;
+  --gap-5xl: 1.5rem;
+
+  /* Paddings */
+  --padding-5xs: 0.5rem;
+  --padding-base: 1rem;
+
+  /* Border radiuses */
+  --br-9xs: 4px;
+  --br-3xs: 10px;
+}
+
+@media screen and (max-width: 360px) {
+  :root {
+    /* fonts */
+    --font-manrope: Manrope;
+  
+    /* font sizes */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.88rem;
+  
+    /* Colors */
+    --color-white: #fff;
+    --color-darkslategray-100: #252f3d;
+    --color-dimgray: #4d5254;
+    --color-lightgray: #cfcfcf;
+    --color-black: #000;
+    --color-royalblue: #2c7ef8;
+  
+    /* Gaps */
+    --gap-base: 1rem;
+    --gap-xs: 0.75rem;
+    --gap-5xl: 1.5rem;
+    --gap-5xs: 0.5rem;
+  
+    /* Paddings */
+    --padding-xl: 1.25rem;
+    --padding-5xs: 0.5rem;
+    --padding-base: 1rem;
+  
+    /* Border radiuses */
+    --br-9xs: 4px;
+    --br-3xs: 10px;
+  }
+  
+}
