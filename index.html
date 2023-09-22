@@ -14,8 +14,12 @@
 <body>
     <div class="clarifion-upsell">
         <div class="usps">
-            <div class="bg"></div>
-            <div class="div">
+            <div class="bg">
+                <button class="carousel-button prev-button" onclick="prevSlide()"> < </button>
+                <button class="carousel-button next-button" onclick="nextSlide()"> > </button>
+            </div>
+            
+            <div class="div0" id="div0">
                 <img class="fluentcheckmark-starburst-20-icon" alt=""
                     src="./public/fluentcheckmarkstarburst20regular.svg" />
 
@@ -23,24 +27,26 @@
                     30-DAY SATISFACTION GUARANTEE
                 </div>
             </div>
-            <div class="div1">
+            
+            <div class="div1" id="div1">
                 <img class="fluentcheckmark-starburst-20-icon" alt="" src="./public/phtrucklight.svg" />
 
                 <div class="free-delivery-on">
                     Free delivery on orders over $40.00
                 </div>
             </div>
-            <div class="div2">
+            <div class="div2" id="div2">
                 <img class="fluentcheckmark-starburst-20-icon" alt="" src="./public/mdicardsheartoutline.svg" />
 
                 <div class="day-satisfaction-guarantee">50.000+ HAPPY CUSTOMERS</div>
             </div>
-            <div class="div3">
+            <div class="div3" id="div3">
                 <img class="fluentcheckmark-starburst-20-icon" alt=""
                     src="./public/fluentarrowsynccheckmark20regular.svg" />
 
                 <div class="free-delivery-on">100% Money Back Guarantee</div>
             </div>
+            
         </div>
         <div class="clarifio-parent">
             <img class="clarifio-icon" alt=""
@@ -257,6 +263,58 @@
             </div>
         </footer>
     </div>
+    <script>
+        let currentIndex = 0;
+
+        function nextSlide() {
+            const currentSlide = document.getElementById(`div${currentIndex}`);
+            const nextIndex = (currentIndex + 1) % 4;
+            const nextSlide = document.getElementById(`div${nextIndex}`);
+
+            currentSlide.style.visibility = 'hidden';
+            currentSlide.style.position = 'absolute';
+            currentSlide.style.left = '-9999px';
+            currentSlide.style.top = '-9999px';
+
+            nextSlide.style.visibility = 'visible';
+            nextSlide.style.position = 'relative';
+            nextSlide.style.left = '16rem';
+            nextSlide.style.top = '0.94rem';
+
+            if (window.innerWidth <= 360) {
+                nextSlide.style.left = '4rem';
+            } else {
+                nextSlide.style.left = '16rem';
+            }
+
+
+            currentIndex = nextIndex;
+        }
+
+        function prevSlide() {
+            const currentSlide = document.getElementById(`div${currentIndex}`);
+            const prevIndex = (currentIndex - 1 + 4) % 4;
+            const prevSlide = document.getElementById(`div${prevIndex}`);
+
+            currentSlide.style.visibility = 'hidden';
+            currentSlide.style.position = 'absolute';
+            currentSlide.style.left = '-9999px';
+            currentSlide.style.top = '-9999px';
+
+            prevSlide.style.visibility = 'visible';
+            prevSlide.style.position = 'relative';
+            
+            prevSlide.style.top = '0.94rem';
+
+            if (window.innerWidth <= 360) {
+                prevSlide.style.left = '4rem';
+            } else {
+                prevSlide.style.left = '16rem';
+            }
+
+            currentIndex = prevIndex;
+        }
+    </script>
 </body>
 
 </html>

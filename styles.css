@@ -25,7 +25,14 @@
   font-weight: 500;
 }
 
-.div {
+.carousel-button{
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
+.div0 {
   position: absolute;
   top: 0.94rem;
   left: 7.94rem;
@@ -817,6 +824,36 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .bg{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .carousel-button{
+    position: relative;
+    top: 0.44rem;
+    padding: 10px 20px;
+    margin: 0 5px;
+    left: 0;
+    visibility: visible;
+    background-color: #252f3d;
+    color: #fafafa;
+    box-shadow: none; /* Quitar la sombra */
+    border: none; /* Quitar el relieve */
+  }
+
+  .div0{
+    left: 16rem;
+  }
+
+  .div1, .div2, .div3{
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+  }
+
   .clarifio-parent {
     padding: 1rem;
     /* Ajusta el padding según tus necesidades */
@@ -980,6 +1017,19 @@
 }
 
 @media screen and (max-width: 360px) {
+
+  .div0{
+    left:4rem;
+    top:0.94rem;
+  }
+
+  .div1, .div2, .div3{
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+  }
+
   .wait-your-order-in-progress-parent{
     align-content: center;
     top: 7rem;
